@@ -58,7 +58,7 @@ func callProcess(caller *sap_api_caller.SAPAPICaller, msg rabbitmq.RabbitmqMessa
 
 func extractData(data map[string]interface{}) (manufacturingOrder string) {
 	sdc := sap_api_input_reader.ConvertToSDC(data)
-	manufacturingOrder = sdc.ManufacturingOrder.ManufacturingOrder
+	manufacturingOrder = sdc.ProductionOrder.ManufacturingOrder
 	return
 }
 

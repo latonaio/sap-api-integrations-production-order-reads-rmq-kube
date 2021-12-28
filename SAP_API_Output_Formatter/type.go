@@ -77,6 +77,12 @@ type General struct {
 }
 
 type ToProductionOrderComponent struct {
+			ManufacturingOrder             string `json:"ManufacturingOrder"`
+			ManufacturingOrderSequence     string `json:"ManufacturingOrderSequence"`
+			ManufacturingOrderOperation    string `json:"ManufacturingOrderOperation"`
+			OrderInternalBillOfOperations  string `json:"OrderInternalBillOfOperations"`
+			BOMItem                        string `json:"BOMItem"`
+			BillOfMaterialItemNumber       string `json:"BillOfMaterialItemNumber"`
 			Reservation                    string `json:"Reservation"`
 			ReservationItem                string `json:"ReservationItem"`
 			MaterialGroup                  string `json:"MaterialGroup"`
@@ -84,11 +90,7 @@ type ToProductionOrderComponent struct {
 			Plant                          string `json:"Plant"`
 			ManufacturingOrderCategory     string `json:"ManufacturingOrderCategory"`
 			ManufacturingOrderType         string `json:"ManufacturingOrderType"`
-			ManufacturingOrder             string `json:"ManufacturingOrder"`
-			ManufacturingOrderSequence     string `json:"ManufacturingOrderSequence"`
-			ManufacturingOrderOperation    string `json:"ManufacturingOrderOperation"`
 			ProductionPlant                string `json:"ProductionPlant"`
-			OrderInternalBillOfOperations  string `json:"OrderInternalBillOfOperations"`
 			MatlCompRequirementDate        string `json:"MatlCompRequirementDate"`
 			MatlCompRequirementTime        string `json:"MatlCompRequirementTime"`
 			ReservationIsFinallyIssued     bool   `json:"ReservationIsFinallyIssued"`
@@ -99,9 +101,7 @@ type ToProductionOrderComponent struct {
 			SalesOrderItem                 string `json:"SalesOrderItem"`
 			SortField                      string `json:"SortField"`
 			BillOfMaterialCategory         string `json:"BillOfMaterialCategory"`
-			BOMItem                        string `json:"BOMItem"`
 			BOMItemCategory                string `json:"BOMItemCategory"`
-			BillOfMaterialItemNumber       string `json:"BillOfMaterialItemNumber"`
 			BOMItemDescription             string `json:"BOMItemDescription"`
 			StorageLocation                string `json:"StorageLocation"`
 			Batch                          string `json:"Batch"`
@@ -122,8 +122,6 @@ type ToProductionOrderComponent struct {
 			ComponentScrapInPercent        string `json:"ComponentScrapInPercent"`
 			OperationScrapInPercent        string `json:"OperationScrapInPercent"`
 			BaseUnit                       string `json:"BaseUnit"`
-			BaseUnitISOCode                string `json:"BaseUnitISOCode"`
-			BaseUnitSAPCode                string `json:"BaseUnitSAPCode"`
 			RequiredQuantity               string `json:"RequiredQuantity"`
 			WithdrawnQuantity              string `json:"WithdrawnQuantity"`
 			ConfirmedAvailableQuantity     string `json:"ConfirmedAvailableQuantity"`
@@ -196,8 +194,6 @@ type ToProductionOrderOperation struct {
 			ErlstSchedldExecDurnInWorkdays int         `json:"ErlstSchedldExecDurnInWorkdays"`
 			OpActualExecutionDays          int         `json:"OpActualExecutionDays"`
 			OperationUnit                  string      `json:"OperationUnit"`
-			OperationUnitISOCode           string      `json:"OperationUnitISOCode"`
-			OperationUnitSAPCode           string      `json:"OperationUnitSAPCode"`
 			OpPlannedTotalQuantity         string      `json:"OpPlannedTotalQuantity"`
 			OpTotalConfirmedYieldQty       string      `json:"OpTotalConfirmedYieldQty"`
 			LastChangeDateTime             string      `json:"LastChangeDateTime"`
